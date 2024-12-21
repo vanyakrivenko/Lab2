@@ -49,7 +49,7 @@ class TestIPv6Functions(unittest.TestCase):
         self.wfile.write(b"2001:0db8:85a3:0000:0000:8a2e:0370:7334\n::1\n12345::6789\n")
 
     PORT = 8000
-    httpd = socketserver.TCPServer((", PORT), TestHandler)
+    httpd = socketserver.TCPServer(("", PORT), TestHandler)
 
     def start_server():
       httpd.serve_forever()
@@ -70,6 +70,6 @@ class TestIPv6Functions(unittest.TestCase):
     httpd.shutdown()
     server_thread.join()
 
-if __name__ = "__main__":
+if __name__ == "__main__":
   unittest.main()
       
