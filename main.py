@@ -32,9 +32,9 @@ def validate_ips_from_input():
     user_ips.append(ip)
 
 
-  valid_ips = [ip for ip in users_ips if validate_ipv6(ip)]
-     print("\nКорректные IP-адреса:")
-    print(", ".join(valid_ips))
+  valid_ips = [ip for ip in user_ips if validate_ipv6(ip)]
+  print("\nКорректные IP-адреса:")
+  print(", ".join(valid_ips))
 
 if __name__ == "__main__":
     print("Выберите действие:")
